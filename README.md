@@ -5,26 +5,26 @@ ChatGPT-Vue3 示例项目
 
 
 目录结构
+- **chatgpt-vue3/**
+  - **server/**             
+    - `.env.vue`           # 通义千问的 Key  
+    - `index.js`           # Express 入口，SSE & 文件上传  
+    - `package.json`       # 后端依赖与启动脚本  
+  - **src/**                
+    - **components/**      
+      - `Sidebar.vue`      # 左侧会话列表  
+      - `ChatHeader.vue`   # 会话头部  
+      - `ChatArea.vue`      # 主聊天区  
+      - `ChatInput.vue`     # 输入框 & 上传/文件按钮  
+      - `ChatMessages.vue`  # 消息列表容器  
+      - `ChatMessageItem.vue` # 单条消息气泡渲染  
+    - `App.vue`            # 全局布局与状态管理  
+    - `index.css`          # 全局样式  
+    - `main.js`            # Vue3 + Vite 入口  
+  - **public/**            # 静态资源（logo、图标 等）  
+  - `package.json`         # 前端依赖与脚本  
+  - `vite.config.js`       # Vite 配置（代理、打包）  
 
-chatgpt-vue3/
-├─ server/             # 后端代码
-├─ ├─ .env.vue         # 通义千问的key
-│  └─ index.js         # Express 入口，SSE & 文件上传
-│ 
-├─ src/                # 前端代码
-│  ├─ components/
-│  │  ├─ Sidebar.vue   # 左侧会话列表
-│  │  ├─ ChatHeader.vue# 会话头部
-│  │  ├─ ChatArea.vue  # 主聊天区
-│  │  ├─ ChatInput.vue # 输入框 & 上传按钮
-│  │  └─ ChatMessages.vue / ChatMessageItem.vue  # 消息渲染
-│  ├─ App.vue          # 布局与状态管理
-│  ├─ index.css        # 全局样式
-│  └─ main.js          # Vue3 + Vite 入口
-├─ public/             # 静态资源（logo、图标）
-├─ package.json        # 前端依赖与脚本
-├─ server/package.json # 后端依赖与启动脚本
-└─ vite.config.js      # Vite 配置（代理、打包）
 
 环境要求
 
@@ -38,25 +38,22 @@ npm 或 yarn
 
 git clone <repo_url>
 cd chatgpt-vue3
-# 安装前端依赖
+安装前端依赖
 npm install
-# 安装后端依赖
+安装后端依赖
 cd server
 npm install
 cd ..
 
-配置环境变量：
-# server/.env
+配置key：server/.env
 DASHSCOPE_API_KEY=你的通义千问的key
 
 
 启动后端：
-
 cd server
 npm run start   # 或 node index.js
 
 启动前端：
-
 cd ..
 npm run dev
 
