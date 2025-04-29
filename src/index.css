@@ -1,0 +1,39 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  background-color: #1f2937;
+}
+
+/* —— Webkit 浏览器（Chrome、Edge、Safari） —— */
+::-webkit-scrollbar {
+  width: 8px;                /* 竖向滚动条宽度 */
+  height: 8px;               /* 横向滚动条高度 */
+}
+
+::-webkit-scrollbar-track {
+  background: #2d3748;       /* 轨道颜色（深灰） */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568;       /* 滑块颜色（中灰） */
+  border-radius: 4px;        /* 滑块圆角 */
+  border: 2px solid #2d3748; /* 内边距出凹槽效果 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #718096;       /* hover 时变浅一点 */
+}
+
+/* —— Firefox —— */
+* {
+  scrollbar-width: thin;                     /* 细滚动条 */
+  scrollbar-color: #4a5568 #2d3748;          /* thumb track */
+}
